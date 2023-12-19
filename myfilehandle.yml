@@ -5,4 +5,4 @@
         - name: i want to create a file in ubuntu node
           file:
             path: /home/vishu
-            state: present
+            state: touch
