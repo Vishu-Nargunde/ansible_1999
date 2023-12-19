@@ -15,6 +15,7 @@
               name: treeee
               state: present
           tags: mytree 
+          ignore_errors: yes
 
 
 
