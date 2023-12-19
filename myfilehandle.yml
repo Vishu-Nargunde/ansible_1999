@@ -4,5 +4,5 @@
   tasks:
         - name: i want to create a file in ubuntu node
           file:
-            path: /home/vishu
+            path: /home/vishu/myfile
             state: touch
