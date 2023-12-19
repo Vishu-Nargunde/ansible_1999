@@ -6,5 +6,5 @@
 
       - name: i want to create a file in ubuntu node
         apt:
-            name: Apache2
+            name: apache2
             state: present
