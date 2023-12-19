@@ -2,7 +2,7 @@
 - hosts: 172.31.31.219
   become: yes
   tasks:
-      - include_task: myfilehandle.yml
+      - include_tasks: myfilehandle.yml
 
       - name: i want to create a file in ubuntu node
         apt:
