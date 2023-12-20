@@ -11,7 +11,7 @@
         when: ansible_os_family == "Debian"
 
       - name: i want to create a file in redhat node
-        apt:
+        yum:
             name: httpd
             state: present
         when: ansible_os_family == "RedHat"
