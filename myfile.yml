@@ -1,5 +1,5 @@
 ---
-- hosts: 172.31.31.219
+- hosts: all 
   become: yes
   tasks:
       - include_tasks: myfilehandle.yml
@@ -8,6 +8,13 @@
         apt:
             name: apache2
             state: present
+        when: ansible_os_family = "Debian"
+
+      - name: i want to create a file in redhat node
+        apt:
+            name: httpd
+            state: present
+         when: ansible_os_family = "RedHat"
 
       - name: i want replay apache2 template with my page
         template:
