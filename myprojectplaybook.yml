@@ -2,4 +2,5 @@
 - hosts: 172.31.31.219  
   become: yes
   roles:
-  - myprojectfile
+  - { role: myprojectfile , when: ansible_os_family == "Debian" }
+  
