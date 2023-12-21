@@ -1,6 +1,6 @@
 ---
 # handlers file for myprojectfile
 - name: restartwebserver
-    service:
+  service:
        name: apache2
        state: restarted
