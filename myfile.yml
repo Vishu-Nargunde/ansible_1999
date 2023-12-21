@@ -7,8 +7,7 @@
       - name: i want to create a file in ubuntu node
         apt:
             name: apache2
-            state: present
-        when: ansible_os_family == "Debian"
+        notify: restartwebserver
 
       - name: i want to create a file in redhat node
         yum:
@@ -20,4 +19,9 @@
         template:
             src: mytemplate/mypage.j2
             dest: /var/www/html/index.html
-        when: ansible_os_family == "Debian"
+      
+    handlers:
+      - name: restartwebserver
+        service:
+            name: apache2
+            state: restarted
