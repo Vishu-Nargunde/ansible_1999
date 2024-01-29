@@ -1,8 +1,1 @@
----
-- hosts: all
-  become: yes
-  tasks:
-          - name: install apache on ubuntu 
-            apt:
-                  name: apache2
-                  state: present
+123.87.90.800
